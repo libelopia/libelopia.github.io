@@ -15,15 +15,17 @@
 
       * {
         font-family: Grotesk;
-        cursor: url("img/mouse.png"), default;
+        /* cursor: url("img/mouse.png"), default; */
       }
 
       .mouse-pointer {
-        cursor: url("img/mouse-pointer.png"), auto;
+        cursor:pointer;
+        /* cursor: url("img/mouse-pointer.png"), auto; */
       }
 
       .mouse-pointer > * {
-        cursor: url("img/mouse-pointer.png"), auto;
+        cursor:pointer;
+        /* cursor: url("img/mouse-pointer.png"), auto; */
       }
 
       .img_wrap {
@@ -53,6 +55,18 @@
         left: 0;
         right: 0;
         background-image: url("img/play-button.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity:0.4;
+      }
+
+      .play_button_white {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("img/play-button-white.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         opacity:0.4;
@@ -119,7 +133,7 @@
           <div class="img_wrap">
             <video style="width:100%;height:100%;" poster="projects/censorship/thumbnail_censorship.png" preload="none">
             </video>
-            <div class="play_button"></div>
+            <div class="play_button_white"></div>
             <div class="img_description mouse-pointer my-auto" onclick="go_to_video('censorship');">
               <h2>CENSORSHIP</h2>
               <br>
@@ -134,7 +148,9 @@
               <p>Textures and compositing artist: Adèle Coulloudon</p>
 
               <div class="d-none d-md-inline"><br></div>
-              <p>Commissioned by Teatrul ca Rezistență (Asociația Timișoara 2021 - Capitală Europeană a Culturii, part of Heritage Contact Zone), co-financed by Creative Europe with the help of Primăria Municipiului Timișoara and Consiliul Local, through the project Timișoara, Capitală Europeană a Culturii 2021</p>
+              <p>Commissioned by Teatrul ca Rezistență (Asociația Timișoara 2021 - Capitală Europeană a Culturii, part of Heritage Contact Zone),</p>
+              <p>co-financed by Creative Europe with the help of Primăria Municipiului Timișoara and Consiliul Local,</p>
+              <p>through the project Timișoara, Capitală Europeană a Culturii 2021</p>
 
               <div class="d-none d-md-inline"><br></div>
               <p>2020</p>
@@ -152,10 +168,10 @@
             <div class="img_description mouse-pointer my-auto" onclick="go_to_video('the_one');">
               <h2>THE ONE</h2>
               <br>
-              <p>An open-ended story about the only person who is here with us from beginning to end: ourselves</p>
+              <p>An open-ended story about the only person who is here with us from beginning to end: ourselves.</p>
 
               <div class="d-none d-md-inline"><br></div>
-              <p>EP album identity and Spotify videos commissioned by musician Ann Kuznetzova.</p>
+              <p>EP album identity and Spotify videos commissioned by musician Ann Kuznetzova</p>
               
               <br>
               <p>Animator: Laura Pop</p>
@@ -236,7 +252,7 @@
           <div class="img_wrap">
             <video style="height:100%;width:100%;" poster="projects/film_o_clock/thumbnail_film_o_clock_teaser.jpg" preload="none">
             </video>
-            <div class="play_button"></div>
+            <div class="play_button_white"></div>
             <div class="img_description mouse-pointer my-auto" onclick="go_to_video('film_o_clock_teaser');">
               <h2>FILM O'CLOCK / TEASER</h2>
               <br>

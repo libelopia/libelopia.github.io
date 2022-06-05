@@ -14,15 +14,17 @@
 
       * {
         font-family: Grotesk;
-        cursor: url("img/mouse.png"), default;
+        /* cursor: url("img/mouse.png"), default; */
       }
 
       .mouse-pointer {
-        cursor: url("img/mouse-pointer.png"), auto;
+        cursor:pointer;
+        /* cursor: url("img/mouse-pointer.png"), auto; */
       }
 
       .mouse-pointer > * {
-        cursor: url("img/mouse-pointer.png"), auto;
+        cursor:pointer;
+        /* cursor: url("img/mouse-pointer.png"), auto; */
       }
 
       .img_wrap {
@@ -52,6 +54,18 @@
         left: 0;
         right: 0;
         background-image: url("img/play-button.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity:0.4;
+      }
+
+      .play_button_white {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("img/play-button-white.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         opacity:0.4;
@@ -103,13 +117,13 @@
           <div class="img_wrap">
             <video style="width:100%;height:100%;" poster="workshops/abiff/thumbnail_abiff.png" preload="none">
             </video>
-            <div class="play_button"></div>
+            <div class="play_button_white"></div>
             <div class="img_description mouse-pointer my-auto" onclick="go_to_video('abiff');">
               <h2>ABIFF</h2>
 
               <div class="d-inline d-lg-none d-xl-inline"><br></div>
               
-              <p>Animation workshop for students developed during the Animation Bucharest International Film Festival.</p>
+              <p>Animation workshop for students developed during the Animation Bucharest International Film Festival</p>
 
               <div class="d-none d-md-inline"><br></div>
               
@@ -158,26 +172,6 @@
           </div>
         </div> -->
 
-        <!-- ANIMATION INCUBATOR MAKING OF 2020 -->
-        <div class="col-12 col-lg-8 py-5 text-center">
-          <div class="img_wrap">
-            <video style="width:100%;height:100%;" poster="workshops/animation_incubator/thumbnail_making_of_animation_incubator_2020.jpg" preload="none">
-            </video>
-            <div class="play_button"></div>
-            <div class="img_description mouse-pointer my-auto" onclick="go_to_video('animation_incubator_making_of_2020');">
-              <h2>ANIMATION INCUBATOR / MAKING OF 2020</h2>
-              <br>
-              <p>Animation workshop for high school students organised by Animest - Bucharest International Film Festival.</p>
-              <br>
-              <p>Coordinators: Paul Mureșan, Laura Pop, Cristian Radu</p>
-              <br>
-              <p>Miriam Arvunescu: “Laura Pop was my mentor during the Incubator. I am very grateful to her because thanks to her I was able to thoroughly study theoretical notions about animation and at the same time apply them during the workshop. I also used the materials she provided as a guide for my end-of-high school project. Laura was also a moral help, being understanding and always giving out good advice which made us feel comfortable!”</p>
-              <br>
-              <p>2020</p>
-            </div>
-          </div>
-        </div>
-
         <!-- ANIMATION INCUBATOR SHOWREEL 2021 -->
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
@@ -185,15 +179,35 @@
             </video>
             <div class="play_button"></div>
             <div class="img_description mouse-pointer my-auto" onclick="go_to_video('animation_incubator_showreel_2021');">
-              <h2>ANIMATION INCUBATOR / SHOWREEL 2021</h2>
+              <h2>ANIMATION INCUBATOR / SHOWREEL</h2>
               <br>
-              <p>Animation workshop for high school students organised by Animest - Bucharest International Film Festival.</p>
+              <p>Animation workshop for high school students organised by Animest - Bucharest International Film Festival</p>
               <br>
               <p>Coordinators: Paul Mureșan, Laura Pop, Cristian Radu</p>
               <br>
-              <p>Mihaela Stetco: “Laura helped me eliminate some preconceptions which were embedded in my head and because of which I felt as if animation was something I would never have access to. The experience with her at the Animation Incubator, where she was my mentor, made me gain confidence in my ideas and put them into practice, however unachievable they might seem.”</p>
+              <p>Mihaela Ștețco: “Laura helped me eliminate some preconceptions which were embedded in my head and because of which I felt as if animation was something I would never have access to. The experience with her at the Animation Incubator, where she was my mentor, made me gain confidence in my ideas and put them into practice, however unachievable they might seem.”</p>
               <br>
               <p>2021</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ANIMATION INCUBATOR MAKING OF 2020 -->
+        <div class="col-12 col-lg-8 py-5 text-center">
+          <div class="img_wrap">
+            <video style="width:100%;height:100%;" poster="workshops/animation_incubator/thumbnail_making_of_animation_incubator_2020.jpg" preload="none">
+            </video>
+            <div class="play_button"></div>
+            <div class="img_description mouse-pointer my-auto" onclick="go_to_video('animation_incubator_making_of_2020');">
+              <h2>ANIMATION INCUBATOR / MAKING OF</h2>
+              <br>
+              <p>Animation workshop for high school students organised by Animest - Bucharest International Film Festival</p>
+              <br>
+              <p>Coordinators: Paul Mureșan, Laura Pop, Cristian Radu</p>
+              <br>
+              <p>Miriam Arvunescu: “Laura Pop was my mentor during the Incubator. I am very grateful to her because thanks to her I was able to thoroughly study theoretical notions about animation and at the same time apply them during the workshop. I also used the materials she provided as a guide for my end-of-high school project. Laura was also a moral help, being understanding and always giving out good advice which made us feel comfortable!”</p>
+              <br>
+              <p>2020</p>
             </div>
           </div>
         </div>
@@ -233,9 +247,10 @@
             </video>
             <div class="play_button"></div>
             <div class="img_description mouse-pointer my-auto" onclick="go_to_video('poienarii_de_arges_1');">
-              <h2>POIENARII DE ARGES / THE KICK</h2>
+              <h2>POIENARII DE ARGEȘ / THE KICK</h2>
               <br>
-              <p>Animation workshop for primary school children from Poienarii de Argeș organised by Teach for Romania & Animest - Bucharest International Film Festival.</p>
+              <p>Animation workshop for primary school children from Poienarii de Argeș organised by</p>
+              <p>Teach for Romania & Animest - Bucharest International Film Festival</p>
               <br>
               <p>Coordinator: Laura Pop</p>
               <br>
@@ -253,9 +268,10 @@
             </video>
             <div class="play_button"></div>
             <div class="img_description mouse-pointer my-auto" onclick="go_to_video('poienarii_de_arges_2');">
-              <h2>POIENARII DE ARGES / THE GOOD WORD</h2>
+              <h2>POIENARII DE ARGEȘ / THE GOOD WORD</h2>
               <br>
-              <p>Animation workshop for primary school children from Poienarii de Argeș organised by Teach for Romania & Animest - Bucharest International Film Festival.</p>
+              <p>Animation workshop for primary school children from Poienarii de Argeș organised by</p>
+              <p>Teach for Romania & Animest - Bucharest International Film Festival</p>
               <br>
               <p>Coordinator: Laura Pop</p>
               <br>

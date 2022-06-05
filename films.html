@@ -14,15 +14,17 @@
 
       * {
         font-family: Grotesk;
-        cursor: url("img/mouse.png"), default;
+        /* cursor: url("img/mouse.png"), default; */
       }
 
       .mouse-pointer {
-        cursor: url("img/mouse-pointer.png"), auto;
+        cursor:pointer;
+        /* cursor: url("img/mouse-pointer.png"), auto; */
       }
 
       .mouse-pointer > * {
-        cursor: url("img/mouse-pointer.png"), auto;
+        cursor:pointer;
+        /* cursor: url("img/mouse-pointer.png"), auto; */
       }
 
       .img_wrap {
@@ -52,6 +54,18 @@
         left: 0;
         right: 0;
         background-image: url("img/play-button.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity:0.4;
+      }
+
+      .play_button_white {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("img/play-button-white.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         opacity:0.4;
@@ -135,12 +149,12 @@
           </div>
         </div>
 
-        <!-- moarte -->
+        <!-- death -->
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
             <video style="width:100%;height:100%;" poster="films/thumbnail_Death_LauraPop.png" preload="none">
             </video>
-            <div class="play_button"></div>
+            <div class="play_button_white"></div>
             <div class="img_description mouse-pointer my-auto" onclick="go_to_video('death');">
               <h2>DEATH</h2>
 
@@ -175,7 +189,7 @@
           <div class="img_wrap">
             <video style="width:100%;height:100%;" poster="films/thumbnail_Miroir_LauraPop.png" preload="none">
             </video>
-            <div class="play_button"></div>
+            <div class="play_button_white"></div>
             <div class="img_description mouse-pointer my-auto" onclick="go_to_video('miroir');">
               <h2>MIROIR</h2>
               
