@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="w-100 h-100">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="./img/libelopia.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <style>
+      @font-face { font-family: Grotesk; src: url('fonts/hk-grotesk.regular.otf'); }
+
+      * {
+        font-family: Grotesk;
+        cursor: url("img/mouse.png"), default;
+      }
+
+      .mouse-pointer {
+        cursor: url("img/mouse-pointer.png"), auto;
+      }
+
+      .mouse-pointer > * {
+        cursor: url("img/mouse-pointer.png"), auto;
+      }
+
+      .img_wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .play_button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("img/play-button.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity:0.4;
+      }
+    </style>
+
+    <title>Showreel</title>
+  </head>
+  <body class="w-100 h-100" style="background-image: url(img/texture-showreel.jpg); background-repeat:no-repeat; background-attachment:fixed; background-size: 100% 100%;">
+    <!-- home button -->
+    <div class="d-none d-sm-block" style="height:10vh; position:fixed; top:0; left:0; z-index:3">
+      <a href="index.html">
+        <img class="w-100 h-100 mouse-pointer" src="img/logo.png">
+      </a>
+    </div>
+
+    <!-- home button phone -->
+    <div class="d-block d-sm-none" style="height:7vh"></div>
+
+    <div class="d-block d-sm-none" style="height:7vh; position:fixed; top:0; left:0; z-index:3">
+      <a href="index.html">
+        <img class="w-100 h-100 mouse-pointer" src="img/logo.png">
+      </a>
+    </div>
+    
+    <div class="container-fluid">
+      <div style="height: 20vh;" class="display-1 text-center">
+        <img src="img/titles/showreel.png" alt="SHOWREEL" class="h-100 img-fluid mx-auto d-block">
+      </div>
+
+      <!-- empty space -->
+      <!-- <div style="height:10vh"></div> -->
+
+      <div class="row justify-content-center">
+
+        <!-- Showreel 2021 -->
+        <div class="col-12 col-lg-7 py-2 text-center">
+          <div class="img_wrap">
+            <video style="width:100%;height:100%;" poster="showreel/thumbnail_showreel.png" preload="none">
+            </video>
+            <div class="play_button mouse-pointer" onclick="go_to_video('showreel2021');"></div>
+            <!-- <div class="img_description my-auto" onclick="go_to_video('showreel2021');">
+              <h2>SHOWREEL 2021</h2>
+            </div> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script>
+      showreels = {
+        'showreel2021': 'showreel_2021.mp4',
+      }
+
+      function go_to_video(showreel) {
+        if(Object.keys(showreels).includes(showreel))
+          window.location.href = "showreel/" + showreels[showreel];
+      }
+    </script>
+  </body>
+</html>
