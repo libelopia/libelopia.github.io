@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
     <link rel="icon" type="image/png" href="./img/libelopia.ico">
     
@@ -120,7 +121,7 @@
           <div class="img_wrap">
             <video style="width:100%;height:100%;" poster="projects/no_rhythm/thumbnail_no_rhythm.png" preload="none">
             </video>
-            <div class="img_description my-auto" onclick="go_to_video('no_rhythm');">
+            <div class="img_description my-auto"> <!-- onclick="play_video(this);" -->
               <h2>NO RHYTHM</h2>
               <br>
               <p>// WORK IN PROGRESS //</p>
@@ -132,9 +133,10 @@
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
             <video style="width:100%;height:100%;" poster="projects/censorship/thumbnail_censorship.png" preload="none">
+              <source src="projects/censorship/Censorship - by Laura Pop.mp4" type="video/mp4">
             </video>
             <div class="play_button_white"></div>
-            <div class="img_description mouse-pointer my-auto" onclick="go_to_video('censorship');">
+            <div class="img_description mouse-pointer my-auto" onclick="play_video(this);">
               <h2>CENSORSHIP</h2>
 
               <div class="d-none d-md-inline d-lg-none d-xl-inline"><br></div>
@@ -150,7 +152,7 @@
               <p>Editor: Diana Rădulescu</p>
               <p>Textures and compositing artist: Adèle Coulloudon</p>
 
-              <div class="d-none d-sm-inline"><br></div>
+              <div class="d-none d-sm-inline d-lg-none d-xl-inline"><br></div>
 
               <p>Commissioned by Teatrul ca Rezistență (Asociația Timișoara 2021 - Capitală Europeană a Culturii, part of Heritage Contact Zone),</p>
               <p>co-financed by Creative Europe with the help of Primăria Municipiului Timișoara and Consiliul Local,</p>
@@ -168,9 +170,10 @@
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
             <video style="width:100%;height:100%;" poster="projects/the_one/thumbnail_the_one.jpg" preload="none">
+              <source src="projects/the_one/the_one.mp4" type="video/mp4">
             </video>
             <div class="play_button"></div>
-            <div class="img_description mouse-pointer my-auto" onclick="go_to_video('the_one');">
+            <div class="img_description mouse-pointer my-auto" onclick="play_video(this);">
               <h2>THE ONE</h2>
               
               <div class="d-none d-sm-inline"><br></div>
@@ -233,9 +236,10 @@
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
             <video style="height:100%;width:100%;" poster="projects/film_o_clock/thumbnail_film_o_clock_trailer.jpg" preload="none">
+              <source src="projects/film_o_clock/Film OClock - trailer by Laura Pop.mp4" type="video/mp4">
             </video>
             <div class="play_button"></div>
-            <div class="img_description mouse-pointer my-auto" onclick="go_to_video('film_o_clock_trailer');">
+            <div class="img_description mouse-pointer my-auto" onclick="play_video(this);">
               <h2>FILM O'CLOCK / TRAILER</h2>
               
               <div class="d-none d-sm-inline"><br></div>
@@ -263,9 +267,10 @@
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
             <video style="height:100%;width:100%;" poster="projects/film_o_clock/thumbnail_film_o_clock_teaser.jpg" preload="none">
+              <source src="projects/film_o_clock/Film OClock - teaser by Laura Pop.mp4" type="video/mp4">
             </video>
             <div class="play_button_white"></div>
-            <div class="img_description mouse-pointer my-auto" onclick="go_to_video('film_o_clock_teaser');">
+            <div class="img_description mouse-pointer my-auto" onclick="play_video(this);">
               <h2>FILM O'CLOCK / TEASER</h2>
 
               <div class="d-none d-sm-inline"><br></div>
@@ -292,18 +297,19 @@
     </div>
 
     <script>
-      projects = {
-        // 'no_rhythm': 'no_rhythm/???',
-        'censorship': 'censorship/Censorship - by Laura Pop.mp4',
-        'the_one': 'the_one/the_one.mp4',
-        'film_o_clock_trailer': 'film_o_clock/Film OClock - trailer by Laura Pop.mp4',
-        'film_o_clock_teaser': 'film_o_clock/Film OClock - teaser by Laura Pop.mp4'
-      }
+      function play_video(img) {
+        //maybe better method
+        const vid = img.parentElement.firstChild.nextSibling;
+        const play_overlay = vid.nextSibling.nextSibling;
+        
+        // console.log(vid);
+        play_overlay.style.display = 'none';
+        img.style.display='none';
 
-      function go_to_video(project) {
-        if(Object.keys(projects).includes(project))
-          window.location.href = "projects/" + projects[project];
-      }
+        vid.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+        vid.play();
+        vid.controls = true;
+      };
     </script>
   </body>
 </html>
