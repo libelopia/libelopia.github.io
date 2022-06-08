@@ -3,6 +3,20 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="description" content="Libelopia is an animation studio founded in 2020 by Laura Pop, specialising in art direction, 2D animation, and animation workshops.">
+    <meta name="keywords" content="Libelopia, Laura, Pop, films, movies, animation">
+
+    <!--  Social media -->
+    <meta property="og:title" content="Films - Libelopia">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://libelopia.com/img/titles/libelopia.png">
+    <meta property="og:url" content="https://libelopia.com/films.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="og:description" content="Libelopia is an animation studio founded in 2020 by Laura Pop, specialising in art direction, 2D animation, and animation workshops.">
+    <meta property="og:site_name" content="Libelopia">
+
+    <title>Films - Libelopia</title>
 
     <link rel="icon" type="image/png" href="./img/libelopia.ico">
     
@@ -84,14 +98,12 @@
         margin-bottom: 0 !important;
       }
     </style>
-
-    <title>Films</title>
   </head>
   <body style="background-image: url(img/texture-films.jpg); background-repeat:no-repeat; background-attachment:fixed; background-size: 100% 100%;">
     <!-- home button -->
     <div class="d-none d-sm-block" style="height:10vh; position:fixed; top:0; left:0; z-index:3">
       <a href="index.html">
-        <img class="h-100 mouse-pointer" src="img/logo.png">
+        <img class="h-100 mouse-pointer" src="img/logo.png" alt="">
       </a>
     </div>
 
@@ -100,14 +112,14 @@
 
     <div class="d-block d-sm-none" style="height:7vh; position:fixed; top:0; left:0; z-index:3">
       <a href="index.html">
-        <img class="h-100 mouse-pointer" src="img/logo.png">
+        <img class="h-100 mouse-pointer" src="img/logo.png" alt="">
       </a>
     </div>
     
-    <div class="container-fluid">
-      <div style="height: 20vh;" class="display-1 text-center">
+    <div id="content-js-enabled" style="display:none" class="container-fluid">
+      <h1 style="height: 20vh;" class="my-0 display-1 text-center">
         <img src="img/titles/films.png" alt="FILMS" class="h-100 img-fluid mx-auto d-block">
-      </div>
+      </h1>
 
       <!-- empty space -->
       <div style="height:10vh"></div>
@@ -117,7 +129,7 @@
         <!-- atriums, ventricles -->
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
-            <video style="width:100%;height:100%;" poster="films/thumbnail_Atriums_ventricles_LauraPop.png" preload="none">
+            <video style="width:100%;" poster="films/thumbnail_Atriums_ventricles_LauraPop.png" preload="none">
               <source src="films/Atriums, ventricles - trailer by Laura Pop.mp4" type="video/mp4">
             </video>
             <div class="play_button"></div>
@@ -154,7 +166,7 @@
         <!-- death -->
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
-            <video style="width:100%;height:100%;" poster="films/thumbnail_Death_LauraPop.png" preload="none">
+            <video style="width:100%;" poster="films/thumbnail_Death_LauraPop.png" preload="none">
               <source src="films/Death - by Laura Pop.mp4" type="video/mp4">
             </video>
             <div class="play_button_white"></div>
@@ -190,7 +202,7 @@
         <!-- miroir -->
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
-            <video style="width:100%;height:100%;" poster="films/thumbnail_Miroir_LauraPop.png" preload="none">
+            <video style="width:100%;" poster="films/thumbnail_Miroir_LauraPop.png" preload="none">
               <source src="films/Miroir - teaser by Laura Pop.mp4" type="video/mp4">
             </video>
             <div class="play_button_white"></div>
@@ -227,14 +239,14 @@
         <!-- monster -->
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
-            <video style="height:100%;width:100%;" poster="films/thumbnail_Monster_LauraPop.jpg" preload="none">
+            <video style="width:100%;" poster="films/thumbnail_Monster_LauraPop.jpg" preload="none">
               <source src="films/Monster - by Laura Pop.mp4" type="video/mp4">
             </video>
             <div class="play_button"></div>
             <div class="img_description mouse-pointer my-auto" onclick="play_video(this);">
               <h2>MONSTER</h2>
 
-              <div class="d-none d-sm-inline"><br></div>
+              <div class="d-none d-sm-inline d-lg-none d-xl-inline"><br></div>
               
               <p>A story about the search for inner peace and about growing up.</p>
 
@@ -249,7 +261,7 @@
               <p><b>AWARDS</b></p>
               <p>Grand Prix & Special Mention (TIFF, local competition), Best Romanian Short (Animest), Jury's Special Prize (DaKINO), Best Animation Film (Filmul de Piatra), 'Ion Truică' Award for Romanian Animation Film (CineMAiubit), Special Mention for Animation (Early Bird International Student Film Festival), Best Animation Film (Movie Screen Pro), Student Jury's Prize (ClassFest), Audience Award (Romanian Days in Bremen, children's competition), nomination at the UCIN Awards for Animation Film Award</p>
 
-              <div class="d-none d-sm-inline"><br></div>
+              <div class="d-none d-sm-inline d-lg-none d-xl-inline"><br></div>
 
               <p>&#169; UNATC 2018</p>
 
@@ -260,6 +272,9 @@
       </div>
     </div>
     <script>
+
+      document.getElementById("content-js-enabled").style.display='block';
+
       function play_video(img) {
 
         //maybe better method
@@ -275,5 +290,114 @@
         vid.controls = true;
       };
     </script>
+
+    <!-- if client-side js is disabled, remove the fancy overlay from videos -->
+    <noscript>
+      <div id="content-js-disabled" class="container-fluid">
+        <h1 style="height: 20vh;" class="my-0 display-1 text-center">
+          <img src="img/titles/films.png" alt="FILMS" class="h-100 img-fluid mx-auto d-block">
+        </h1>
+  
+        <!-- empty space -->
+        <div style="height:10vh"></div>
+  
+        <div class="row justify-content-center text-center">
+  
+          <!-- atriums, ventricles -->
+          <div style="background-color: rgba(220, 220, 220, 0.8)" class="col-12 col-lg-8 py-2 my-3 text-center">
+            <h1>ATRIUMS, VENTRICLES</h1>
+            <br>
+            <p>An X-Ray of a heart during the March 2020 quarantine.</p>
+            <br>
+            <p>Writer, director, animator: Laura Pop</p>
+            <p>Producer: Andrei Tănăsescu</p>
+            <p>Sound designer: Ann Kuznetzova</p>
+            <br>
+            <p>Part of Journey around the home in 60 days</p>
+            <p>Commissioned by the 2020 European Film Festival with the financial support of the Romanian Cultural Institute and the European Commission</p>
+            <br>
+            <p><b>SELECTIONS</b></p>
+            <p>Ji.hlava, European Film Festival, Animest</p>
+            <br>
+            <p>&#169; Laura Pop 2020</p>
+            <br>
+
+            <video class="mouse-pointer" style="width:100%;" poster="films/thumbnail_Atriums_ventricles_LauraPop.png" preload="none" controls>
+              <source src="films/Atriums, ventricles - trailer by Laura Pop.mp4" type="video/mp4">
+            </video>
+          </div>
+  
+          <!-- death -->
+          <div style="background-color: rgba(220, 220, 220, 0.8)" class="col-12 col-lg-8 py-2 my-3 text-center">
+            <h1>DEATH</h1>
+            <br>
+            <p>How do we look at death and how does death look at us?</p>
+            <br>
+            <p>Writer, director, animator: Laura Pop</p>
+            <p>Sound designer: Mihai Monescu</p>
+            <br>
+            <p>Developed during the Acasă la Hundorf residency</p>
+            <br>
+            <p><b>SELECTIONS</b></p>
+            <p>Animest, Les Films de Cannes a Bucarest, Dracula Film Festival, Anonimul</p>
+            <br>
+            <p>&#169; Laura Pop 2020</p>
+            <br>
+
+            <video class="mouse-pointer" style="width:100%;" poster="films/thumbnail_Death_LauraPop.png" preload="none" controls>
+              <source src="films/Death - by Laura Pop.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+        </div>
+  
+        <div class="row justify-content-center">
+         
+          <!-- miroir -->
+          <div style="background-color: rgba(220, 220, 220, 0.8)" class="col-12 col-lg-8 py-2 my-3 text-center">
+            <h1>MIROIR</h1>
+            <br>
+            <p>A story about that voice in our head that never stops disagreeing with us.</p>
+            <br>
+            <p>Writer, director, animator: Laura Pop</p>
+            <p>Producer: Jean-Luc Slock</p>
+            <p>Musician and sound designer: Gauthier Simon</p>
+            <br>
+            <p><b>SELECTIONS</b></p>
+            <p>Filem'On International Film Festival for Young Audiences, Animaevka, Festival du Court en Armagnac, Canlandiranlar Film Festival, Sedicicorto Forli International Film Festival, Flipbook Film Festival, Chaniartoon - International Comic & Animation Festival, Open Air FilmFest Weiterstadt, Animare International Animated Short Film Festival, Le Court en dit Long, Moldova Film Festival</p>
+            <br>
+            <p>Selected as official festival trailer and festival poster at SESIFF</p>
+            <br>
+            <p>&#169; Camera-etc 2020</p>
+            <br>
+
+            <video class="mouse-pointer" style="width:100%;" poster="films/thumbnail_Miroir_LauraPop.png" preload="none" controls>
+              <source src="films/Miroir - teaser by Laura Pop.mp4" type="video/mp4">
+            </video>
+          </div>
+  
+          <!-- monster -->
+          <div style="background-color: rgba(220, 220, 220, 0.8)" class="col-12 col-lg-8 py-2 my-3 text-center">
+            <h1>MONSTER</h1>
+            <br>
+            <p>A story about the search for inner peace and about growing up.</p>
+            <br>
+            <p>Writer, director, animator: Laura Pop</p>
+            <p>Composer & musician: Theodoros Popa</p>
+            <p>Sound designer: Grig Burloiu</p>
+            <br>
+            <p><b>AWARDS</b></p>
+            <p>Grand Prix & Special Mention (TIFF, local competition), Best Romanian Short (Animest), Jury's Special Prize (DaKINO), Best Animation Film (Filmul de Piatra), 'Ion Truică' Award for Romanian Animation Film (CineMAiubit), Special Mention for Animation (Early Bird International Student Film Festival), Best Animation Film (Movie Screen Pro), Student Jury's Prize (ClassFest), Audience Award (Romanian Days in Bremen, children's competition), nomination at the UCIN Awards for Animation Film Award</p>
+            <br>
+            <p>&#169; UNATC 2018</p>
+            <br>
+            <video class="mouse-pointer" style="width:100%;" poster="films/thumbnail_Monster_LauraPop.jpg" preload="none" controls>
+              <source src="films/Monster - by Laura Pop.mp4" type="video/mp4">
+            </video>
+          </div>
+  
+        </div>
+      </div>
+    </noscript>
   </body>
 </html>

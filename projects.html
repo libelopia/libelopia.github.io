@@ -3,6 +3,20 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="description" content="Libelopia is an animation studio founded in 2020 by Laura Pop, specialising in art direction, 2D animation, and animation workshops.">
+    <meta name="keywords" content="Libelopia, Laura, Pop, projects, animation">
+
+    <!--  Social media -->
+    <meta property="og:title" content="Projects - Libelopia">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://libelopia.com/img/titles/libelopia.png">
+    <meta property="og:url" content="https://libelopia.com/projects.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="og:description" content="Libelopia is an animation studio founded in 2020 by Laura Pop, specialising in art direction, 2D animation, and animation workshops.">
+    <meta property="og:site_name" content="Libelopia">
+
+    <title>Projects - Libelopia</title>
 
     <link rel="icon" type="image/png" href="./img/libelopia.ico">
     
@@ -85,14 +99,13 @@
         margin-bottom: 0 !important;
       }
     </style>
-    <title>Projects</title>
   </head>
   <body style="background-image: url(img/texture-projects.jpg); background-repeat:no-repeat; background-attachment:fixed; background-size: 100% 100%;">
 
     <!-- home button -->
     <div class="d-none d-sm-block" style="height:10vh; position:fixed; top:0; left:0; z-index:3">
       <a href="index.html">
-        <img class="h-100 mouse-pointer" src="img/logo.png">
+        <img class="h-100 mouse-pointer" src="img/logo.png" alt="">
       </a>
     </div>
 
@@ -101,15 +114,15 @@
 
     <div class="d-block d-sm-none" style="height:7vh; position:fixed; top:0; left:0; z-index:3">
       <a href="index.html">
-        <img class="h-100 mouse-pointer" src="img/logo.png">
+        <img class="h-100 mouse-pointer" src="img/logo.png" alt="">
       </a>
     </div>
 
     <!-- main content -->
-    <div class="container-fluid">
-      <div style="height: 20vh;" class="display-1 text-center">
+    <div id="content-js-enabled" style="display:none;" class="container-fluid">
+      <h1 style="height: 20vh;" class="my-0 display-1 text-center">
           <img src="img/titles/projects.png" alt="PROJECTS" class="h-100 img-fluid mx-auto d-block">
-      </div>
+      </h1>
 
       <!-- empty space -->
       <div style="height:10vh"></div>
@@ -119,7 +132,7 @@
         <!-- No Rhythm -->
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
-            <video style="width:100%;height:100%;" poster="projects/no_rhythm/thumbnail_no_rhythm.png" preload="none">
+            <video style="width:100%;" poster="projects/no_rhythm/thumbnail_no_rhythm.png" preload="none">
             </video>
             <div class="img_description my-auto"> <!-- onclick="play_video(this);" -->
               <h2>NO RHYTHM</h2>
@@ -132,7 +145,7 @@
         <!-- Censorship -->
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
-            <video style="width:100%;height:100%;" poster="projects/censorship/thumbnail_censorship.png" preload="none">
+            <video style="width:100%;" poster="projects/censorship/thumbnail_censorship.png" preload="none">
               <source src="projects/censorship/Censorship - by Laura Pop.mp4" type="video/mp4">
             </video>
             <div class="play_button_white"></div>
@@ -169,7 +182,7 @@
         <!-- The one -->
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
-            <video style="width:100%;height:100%;" poster="projects/the_one/thumbnail_the_one.jpg" preload="none">
+            <video style="width:100%;" poster="projects/the_one/thumbnail_the_one.jpg" preload="none">
               <source src="projects/the_one/the_one.mp4" type="video/mp4">
             </video>
             <div class="play_button"></div>
@@ -204,38 +217,11 @@
       </div> -->
       
       <div class="row justify-content-center">
-       
-        <!-- Film O Clock general -->
-        <!-- <div class="col-12 col-lg-8 py-5 text-center">
-          <div class="img_wrap">
-            <video style="width:100%;height:100%;" poster="projects/film_o_clock/thumbnail_film_o_clock_general.jpg" preload="none">
-            </video>
-            <div style="cursor: default;" class="img_description my-auto">
-              <h2>FILM O'CLOCK</h2>
-              <br>
-              <p>Trailer and teaser for Film O'Clock International Film Festival</p>
-              
-              <div class="d-none d-xl-inline"><br></div>
-              
-              <p>Conceptual artist and animator: Laura Pop</p>
-              <p>Sound design: Ann Kuznetzova</p>
-              
-              <div class="d-none d-xl-inline"><br></div>
-              
-              <p>Commissioned by Film O'Clock International Film Festival</p>
-              
-              <div class="d-none d-xl-inline"><br></div>
-
-              <p>2020</p>
-
-            </div>
-          </div>
-        </div> -->
 
         <!-- Film O Clock trailer -->
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
-            <video style="height:100%;width:100%;" poster="projects/film_o_clock/thumbnail_film_o_clock_trailer.jpg" preload="none">
+            <video style="width:100%;" poster="projects/film_o_clock/thumbnail_film_o_clock_trailer.jpg" preload="none">
               <source src="projects/film_o_clock/Film OClock - trailer by Laura Pop.mp4" type="video/mp4">
             </video>
             <div class="play_button"></div>
@@ -266,7 +252,7 @@
         <!-- Film O Clock teaser -->
         <div class="col-12 col-lg-8 py-5 text-center">
           <div class="img_wrap">
-            <video style="height:100%;width:100%;" poster="projects/film_o_clock/thumbnail_film_o_clock_teaser.jpg" preload="none">
+            <video style="width:100%;" poster="projects/film_o_clock/thumbnail_film_o_clock_teaser.jpg" preload="none">
               <source src="projects/film_o_clock/Film OClock - teaser by Laura Pop.mp4" type="video/mp4">
             </video>
             <div class="play_button_white"></div>
@@ -297,6 +283,8 @@
     </div>
 
     <script>
+      document.getElementById("content-js-enabled").style.display='block';
+
       function play_video(img) {
         //maybe better method
         const vid = img.parentElement.firstChild.nextSibling;
@@ -311,5 +299,118 @@
         vid.controls = true;
       };
     </script>
+
+    <noscript>
+      <div id="content-js-disabled" class="container-fluid">
+        <h1 style="height: 20vh;" class="my-0 display-1 text-center">
+            <img src="img/titles/projects.png" alt="PROJECTS" class="h-100 img-fluid mx-auto d-block">
+        </h1>
+  
+        <!-- empty space -->
+        <div style="height:10vh"></div>
+  
+        <div class="row justify-content-center">
+  
+          <!-- No Rhythm -->
+          <div style="background-color: rgba(220, 220, 220, 0.8)" class="col-12 col-lg-8 py-2 my-3 text-center">
+            <h1>NO RHYTHM</h1>
+            <br>
+            <p>// WORK IN PROGRESS //</p>
+            <br>
+            <video style="width:100%;" poster="projects/no_rhythm/thumbnail_no_rhythm.png" preload="none">
+            </video>
+          </div>
+  
+          <!-- Censorship -->
+          <div style="background-color: rgba(220, 220, 220, 0.8)" class="col-12 col-lg-8 py-2 my-3 text-center">
+            <h1>CENSORSHIP</h1>
+            <br>
+            <p>A story about the communist regime.</p>
+            <br>
+            <p>Writer, director, animator: Laura Pop</p>
+            <p>Producer: Cristina Modreanu</p>
+            <p>Musician & sound designer: Flora Pop</p>
+            <p>Mixing artist: Mara Mărăcinescu</p>
+            <p>Editor: Diana Rădulescu</p>
+            <p>Textures and compositing artist: Adèle Coulloudon</p>
+            <br>
+            <p>Commissioned by Teatrul ca Rezistență (Asociația Timișoara 2021 - Capitală Europeană a Culturii, part of Heritage Contact Zone),</p>
+            <p>co-financed by Creative Europe with the help of Primăria Municipiului Timișoara and Consiliul Local,</p>
+            <p>through the project Timișoara, Capitală Europeană a Culturii 2021</p>
+            <br>
+            <p>2020</p>
+            <br>
+
+            <video class="mouse-pointer" style="width:100%;" poster="projects/censorship/thumbnail_censorship.png" preload="none" controls>
+              <source src="projects/censorship/Censorship - by Laura Pop.mp4" type="video/mp4">
+            </video>
+
+          </div>
+  
+          <!-- The one -->
+          <div style="background-color: rgba(220, 220, 220, 0.8)" class="col-12 col-lg-8 py-2 my-3 text-center">
+            <h1>THE ONE</h1>
+            <br>
+            <p>An open-ended story about the only person who is here with us from beginning to end: ourselves.</p>
+            <br>
+            <p>EP album identity and Spotify videos commissioned by musician Ann Kuznetzova</p>
+            <br>
+            <p>Animator: Laura Pop</p>
+            <p>Musician: Ann Kuznetzova</p>
+            <br>
+            <p>2021</p>
+            <br>
+
+            <video class="mouse-pointer" style="width:100%;" poster="projects/the_one/thumbnail_the_one.jpg" preload="none" controls>
+              <source src="projects/the_one/the_one.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+        </div>
+        
+        <div class="row justify-content-center">
+  
+          <!-- Film O Clock trailer -->
+          <div style="background-color: rgba(220, 220, 220, 0.8)" class="col-12 col-lg-8 py-2 my-3 text-center">
+            <h1>FILM O'CLOCK / TRAILER</h1>
+            <br>
+            <p>Trailer for Film O'Clock International Film Festival</p>
+            <br>
+            <p>Coordinator: Mirona Radu</p>
+            <p>Conceptual artist and animator: Laura Pop</p>
+            <p>Sound design: Ann Kuznetzova</p>
+            <br>
+            <p>Commissioned by Film O'Clock International Film Festival</p>
+            <br>
+            <p>2020</p>
+            <br>
+
+            <video class="mouse-pointer" style="width:100%;" poster="projects/film_o_clock/thumbnail_film_o_clock_trailer.jpg" preload="none" controls>
+              <source src="projects/film_o_clock/Film OClock - trailer by Laura Pop.mp4" type="video/mp4">
+            </video>
+          </div>
+  
+          <!-- Film O Clock teaser -->
+          <div style="background-color: rgba(220, 220, 220, 0.8)" class="col-12 col-lg-8 py-2 my-3 text-center">
+            <h1>FILM O'CLOCK / TEASER</h1>
+            <br>
+            <p>Teaser for Film O'Clock International Film Festival</p>
+            <br>
+            <p>Coordinator: Mirona Radu</p>
+            <p>Conceptual artist and animator: Laura Pop</p>
+            <br>
+            <p>Commissioned by Film O'Clock International Film Festival</p>
+            <br>
+            <p>2020</p>
+            <br>
+
+            <video class="mouse-pointer" style="width:100%;" poster="projects/film_o_clock/thumbnail_film_o_clock_teaser.jpg" preload="none" controls>
+              <source src="projects/film_o_clock/Film OClock - teaser by Laura Pop.mp4" type="video/mp4">
+            </video>
+          </div>
+  
+        </div>
+      </div>
+    </noscript>
   </body>
 </html>

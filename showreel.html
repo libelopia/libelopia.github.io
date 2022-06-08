@@ -3,6 +3,20 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="description" content="Libelopia is an animation studio founded in 2020 by Laura Pop, specialising in art direction, 2D animation, and animation workshops.">
+    <meta name="keywords" content="Libelopia, Laura, Pop, showreel, animation">
+
+    <!--  Social media -->
+    <meta property="og:title" content="Showreel - Libelopia">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://libelopia.com/img/titles/libelopia.png">
+    <meta property="og:url" content="https://libelopia.com/showreel.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="og:description" content="Libelopia is an animation studio founded in 2020 by Laura Pop, specialising in art direction, 2D animation, and animation workshops.">
+    <meta property="og:site_name" content="Libelopia">
+
+    <title>Showreel - Libelopia</title>
 
     <link rel="icon" type="image/png" href="./img/libelopia.ico">
     
@@ -46,14 +60,12 @@
         opacity:0.4;
       }
     </style>
-
-    <title>Showreel</title>
   </head>
   <body class="h-100" style="background-image: url(img/texture-showreel.jpg); background-repeat:no-repeat; background-attachment:fixed; background-size: 100% 100%;">
     <!-- home button -->
     <div class="d-none d-sm-block" style="height:10vh; position:fixed; top:0; left:0; z-index:3">
       <a href="index.html">
-        <img class="h-100 mouse-pointer" src="img/logo.png">
+        <img class="h-100 mouse-pointer" src="img/logo.png" alt="">
       </a>
     </div>
 
@@ -62,14 +74,14 @@
 
     <div class="d-block d-sm-none" style="height:7vh; position:fixed; top:0; left:0; z-index:3">
       <a href="index.html">
-        <img class="w-100 h-100 mouse-pointer" src="img/logo.png">
+        <img class="w-100 h-100 mouse-pointer" src="img/logo.png" alt="">
       </a>
     </div>
     
-    <div class="container-fluid">
-      <div style="height: 20vh;" class="display-1 text-center">
+    <div id="content-js-enabled" style="display:none" class="container-fluid">
+      <h1 style="height: 20vh;" class="my-0 display-1 text-center">
         <img src="img/titles/showreel.png" alt="SHOWREEL" class="h-100 img-fluid mx-auto d-block">
-      </div>
+      </h1>
 
       <!-- empty space -->
       <!-- <div style="height:10vh"></div> -->
@@ -79,7 +91,7 @@
         <!-- Showreel 2021 -->
         <div class="col-12 col-lg-7 py-2 text-center">
           <div class="img_wrap">
-            <video style="width:100%;height:100%;" poster="showreel/thumbnail_showreel.png" preload="none">
+            <video style="width:100%;" poster="showreel/thumbnail_showreel.png" preload="none">
               <source src="showreel/showreel_2021.mp4" type="video/mp4">
             </video>
             <div class="play_button mouse-pointer" onclick="play_video(this);"></div>
@@ -89,6 +101,8 @@
       </div>
     </div>
     <script>
+      document.getElementById("content-js-enabled").style.display='block';
+
       function play_video(img) {
         //maybe better method
         const vid = img.parentElement.firstChild.nextSibling;
@@ -103,5 +117,23 @@
         vid.controls = true;
       };
     </script>
+    <noscript>
+      <div id="content-js-disabled" class="container-fluid">
+        <h1 style="height: 20vh;" class="my-0 display-1 text-center">
+          <img src="img/titles/showreel.png" alt="SHOWREEL" class="h-100 img-fluid mx-auto d-block">
+        </h1>
+  
+        <div class="row justify-content-center">
+  
+          <!-- Showreel 2021 -->
+          <div class="col-12 col-lg-7 py-2 text-center">
+            <video class="mouse-pointer" style="width:100%;" poster="showreel/thumbnail_showreel.png" preload="none" controls>
+              <source src="showreel/showreel_2021.mp4" type="video/mp4">
+            </video>
+          </div>
+  
+        </div>
+      </div>
+    </noscript>
   </body>
 </html>

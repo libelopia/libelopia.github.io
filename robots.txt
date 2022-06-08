@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /anim/
+Disallow: /fonts/
+Disallow: /img/
+Sitemap: https://libelopia.com/sitemap.xml
