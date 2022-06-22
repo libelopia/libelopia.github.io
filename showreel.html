@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ro" class="w-100 h-100">
   <head>
+    <!-- Website created by: https://github.com/blox-dev -->
+    <!-- If you have any issues with this website, please report them to https://github.com/libelopia/libelopia.github.io/issues -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="description" content="Libelopia is an animation studio founded in 2020 by Laura Pop, specialising in art direction, 2D animation, and animation workshops.">
     <meta name="keywords" content="Libelopia, Laura, Pop, showreel, animation">
 
-    <!--  Social media -->
     <meta property="og:title" content="Showreel - Libelopia">
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://libelopia.com/img/titles/libelopia.png">
@@ -29,17 +31,14 @@
 
       * {
         font-family: Grotesk;
-        /* cursor: url("img/mouse.png"), default; */
       }
 
       .mouse-pointer {
         cursor:pointer;
-        /* cursor: url("img/mouse-pointer.png"), auto; */
       }
 
       .mouse-pointer > * {
         cursor:pointer;
-        /* cursor: url("img/mouse-pointer.png"), auto; */
       }
 
       .img_wrap {
@@ -54,44 +53,40 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-image: url("img/play-button.png");
+        background-image: url("img/play-button.webp");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         opacity:0.4;
       }
     </style>
   </head>
-  <body class="h-100" style="background-image: url(img/texture-showreel.jpg); background-repeat:no-repeat; background-attachment:fixed; background-size: 100% 100%;">
-    <!-- home button -->
+  <body class="h-100" style="background-image: url(img/texture-showreel.webp); background-repeat:no-repeat; background-attachment:fixed; background-size: 100% 100%;">
+
     <div class="d-none d-sm-block" style="height:10vh; position:fixed; top:0; left:0; z-index:3">
       <a href="index.html">
-        <img class="h-100 mouse-pointer" src="img/logo.png" alt="">
+        <img class="h-100 mouse-pointer" src="img/logo.webp" alt="">
       </a>
     </div>
 
-    <!-- home button phone -->
     <div class="d-block d-sm-none" style="height:7vh"></div>
 
     <div class="d-block d-sm-none" style="height:7vh; position:fixed; top:0; left:0; z-index:3">
       <a href="index.html">
-        <img class="w-100 h-100 mouse-pointer" src="img/logo.png" alt="">
+        <img class="w-100 h-100 mouse-pointer" src="img/logo.webp" alt="">
       </a>
     </div>
     
     <div id="content-js-enabled" style="display:none" class="container-fluid">
       <h1 style="height: 20vh;" class="my-0 display-1 text-center">
-        <img src="img/titles/showreel.png" alt="SHOWREEL" class="h-100 img-fluid mx-auto d-block">
+        <img src="img/titles/showreel.webp" alt="SHOWREEL" class="h-100 img-fluid mx-auto d-block">
       </h1>
-
-      <!-- empty space -->
-      <!-- <div style="height:10vh"></div> -->
 
       <div class="row justify-content-center">
 
         <!-- Showreel 2021 -->
         <div class="col-12 col-lg-7 py-2 text-center">
           <div class="img_wrap">
-            <video style="width:100%;" poster="showreel/thumbnail_showreel.png" preload="none">
+            <video style="width:100%;" poster="showreel/thumbnail_showreel.webp" preload="none">
               <source src="showreel/showreel_2021.mp4" type="video/mp4">
             </video>
             <div class="play_button mouse-pointer" onclick="play_video(this);"></div>
@@ -104,11 +99,9 @@
       document.getElementById("content-js-enabled").style.display='block';
 
       function play_video(img) {
-        //maybe better method
         const vid = img.parentElement.firstChild.nextSibling;
         const play_overlay = vid.nextSibling.nextSibling;
         
-        // console.log(vid);
         play_overlay.style.display = 'none';
         img.style.display='none';
 
@@ -120,14 +113,14 @@
     <noscript>
       <div id="content-js-disabled" class="container-fluid">
         <h1 style="height: 20vh;" class="my-0 display-1 text-center">
-          <img src="img/titles/showreel.png" alt="SHOWREEL" class="h-100 img-fluid mx-auto d-block">
+          <img src="img/titles/showreel.webp" alt="SHOWREEL" class="h-100 img-fluid mx-auto d-block">
         </h1>
   
         <div class="row justify-content-center">
   
           <!-- Showreel 2021 -->
           <div class="col-12 col-lg-7 py-2 text-center">
-            <video class="mouse-pointer" style="width:100%;" poster="showreel/thumbnail_showreel.png" preload="none" controls>
+            <video class="mouse-pointer" style="width:100%;" poster="showreel/thumbnail_showreel.webp" preload="none" controls>
               <source src="showreel/showreel_2021.mp4" type="video/mp4">
             </video>
           </div>
